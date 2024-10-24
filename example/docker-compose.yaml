@@ -1,0 +1,10 @@
+services:
+  postgres:
+    image: postgres:latest
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password1234
+      PGDATA: /var/lib/postgresql/data
+    ports:
+      - "5432:5432"
