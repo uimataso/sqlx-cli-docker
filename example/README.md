@@ -11,7 +11,7 @@ cd example
 docker compose up -d
 
 # run `sqlx database setup`
-docker run --rm -it --network host -v ./migrations:/migrations uima/sqlx-cli:latest sqlx database setup --source /migrations --database-url postgres://postgres:password1234@localhost/test_db
+docker run --rm -it --network host -v ./migrations:/migrations uimataso/sqlx-cli:latest sqlx database setup --source /migrations --database-url postgres://postgres:password1234@localhost/test_db
 
 # check result
 docker compose exec -it postgres psql -U postgres -d test_db -c 'select * from items;'
